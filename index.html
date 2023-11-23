@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+  <title>CodePen - Playful</title>
+
+    <link rel="canonical" href="https://codepen.io/j_shb/pen/Vwgxaby">
+  
+  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=B612+Mono&amp;family=Roboto+Mono:wght@400;600&amp;family=Slackey&amp;display=swap'>
+  
+<style>
+body {
+  align-items: center;
+  background: #3692ff;
+  box-sizing: border-box;
+  color: #001e51;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Slackey', sans-serif;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  padding: 100px;
+}
+
+div {
+  font-size: 10vw;
+  line-height: 1;
+}
+
+div > span {
+  display: inline-block;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: transform;
+}
+
+div > span span {
+  display: inline-block;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+div > span:nth-child(odd) {
+  transform: translateY(50%);
+}
+
+div > span:nth-child(odd) span {
+  transform: translateY(-100%);
+}
+
+div > span:nth-child(even) {
+  transform: translateY(-50%);
+}
+
+div > span:nth-child(even) span {
+  transform: translateY(100%);
+}
+
+div.loaded  > span {
+  transform: translateY(0);
+}
+
+div.loaded > span span {
+  transform: translateY(0);
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <div>
+  <span><span>PL</span></span><span><span>ay</span></span><span><span>Fu</span></span><span><span>L</span></span>
+</div>
+<small>Click to trigger</small>
+  
+      <script id="rendered-js" >
+const d = document.querySelector('div');
+
+setTimeout(() => {
+  d.classList.add('loaded');
+}, 500);
+
+document.body.addEventListener('click', () => {
+  d.classList.toggle('loaded');
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>
